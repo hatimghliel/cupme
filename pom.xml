@@ -974,7 +974,7 @@
                                 <url>jdbc:mysql://ls-5be9a0bd632d2b1b6cf846b3bfc42db0ba376e23.ch4eosmyk18p.eu-west-3.rds.amazonaws.com:3306/CupMe</url>
                                 <defaultSchemaName>CupMe</defaultSchemaName>
                                 <username>dbmasteruser</username>
-                                <password>Ad2#:_G0.FU|6Jn4ME&RFD&Z5uYA(Oyb</password>
+                                <password></password>
                                 <referenceUrl>hibernate:spring:com.cupme.domain?dialect=org.hibernate.dialect.MySQL8Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                                 <verbose>true</verbose>
                                 <logging>debug</logging>
@@ -1069,7 +1069,7 @@
                                 <url>jdbc:mysql://dbmasteruser:3306/CupMe</url>
                                 <defaultSchemaName>CupMe</defaultSchemaName>
                                 <username>dbmasteruser</username>
-                                <password>Ad2#:_G0.FU|6Jn4ME&RFD&Z5uYA(Oyb</password>
+                                <password></password>
                                 <referenceUrl>hibernate:spring:com.cupme.domain?dialect=org.hibernate.dialect.MySQL8Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                                 <verbose>true</verbose>
                                 <logging>debug</logging>
