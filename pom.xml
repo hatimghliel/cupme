@@ -1066,7 +1066,7 @@
                                 <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                                 <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                                 <driver>com.mysql.cj.jdbc.Driver</driver>
-                                <url>jdbc:mysql://dbmasteruser:3306/CupMe</url>
+                                <url>jdbc:mysql://ls-5be9a0bd632d2b1b6cf846b3bfc42db0ba376e23.ch4eosmyk18p.eu-west-3.rds.amazonaws.com:3306/CupMe</url>
                                 <defaultSchemaName>CupMe</defaultSchemaName>
                                 <username>dbmasteruser</username>
                                 <password></password>
