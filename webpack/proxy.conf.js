@@ -2,7 +2,7 @@ function setupProxy({ tls }) {
   const conf = [
     {
       context: ['/api', '/services', '/management', '/v3/api-docs', '/h2-console', '/auth', '/health'],
-      target: `http${tls ? 's' : ''}://localhost:8900`,
+      target: `http${tls ? 's' : ''}://localhost`,
       secure: false,
       changeOrigin: tls,
     },
