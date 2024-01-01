@@ -1,9 +1,9 @@
 package com.cupme.service.utils;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Base64;
-import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -16,16 +16,24 @@ public class AssetFilesService {
     private final Logger log = LoggerFactory.getLogger(AssetFilesService.class);
 
     public String getFile(String path) {
-        String filePath = "src/main/webapp/" + path;
-        File convertFile = new File(filePath);
-        byte[] fileContent = new byte[0];
-        try {
-            convertFile.createNewFile();
-            fileContent = FileUtils.readFileToByteArray(convertFile);
+        // Use the class loader to load the file from within the JAR
+
+        String fullPath = "static/" + path;
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(fullPath)) {
+            if (inputStream == null) {
+                log.debug("File not found: " + fullPath);
+                return null;
+            }
+
+            // Read the content of the file
+            byte[] fileContent = IOUtils.toByteArray(inputStream);
+
+            // Encode the file content to Base64
+            String encodedString = Base64.getEncoder().encodeToString(fileContent);
+            return encodedString;
         } catch (IOException e) {
-            log.debug("File not found: " + filePath);
+            log.error("Error reading file: " + path, e);
+            return null;
         }
-        String encodedString = Base64.getEncoder().encodeToString(fileContent);
-        return encodedString;
     }
 }
