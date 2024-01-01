@@ -49,10 +49,10 @@ spring:
   liquibase:
     contexts: prod
   mail:
-    host: localhost
+    host: email-smtp.us-east-1.amazonaws.com
     port: 25
-    username:
-    password:
+    username: AKIA43NGDUZRPEAZJ4PY
+    password: BNUIb+0rtSYN9UyPqhcn7HgMWTxjXB4fQpL/hY6A6TBH
   thymeleaf:
     cache: true
 
@@ -81,7 +81,7 @@ server:
     key-store: classpath:config/tls/keystore.p12
     key-store-password: cupmessl
     key-store-type: PKCS12
-    key-alias: selfsigned
+    key-alias: cupme
   shutdown: graceful # see https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-graceful-shutdown
   compression:
     enabled: true

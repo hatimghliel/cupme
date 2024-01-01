@@ -184,7 +184,7 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: CupMe@localhost
+    from: contact@cupme.fr
   api-docs:
     default-include-pattern: ${server.servlet.context-path:}/api/**
     management-include-pattern: ${server.servlet.context-path:}/management/**
